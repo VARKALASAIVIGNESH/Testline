@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        /* Results Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #ff5722;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #ff9800;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #bdbdbd;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border: 2px solid #ff5722;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .results {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 2px solid #ff5722;
+        }
+
+        .results .feedback {
+            background-color: #424242;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .feedback-item {
+            background-color: #424242;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: #f5f5f5;
+        }
+
+        .feedback-item .label {
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .recommendations {
+            background-color: #424242;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .recommendation-item {
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            color: #f5f5f5;
+        }
+
+        .footer {
+            background-color: #1f1f1f;
+            padding: 15px;
+            text-align: center;
+            color: #bbb;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Results</h1>
+
+    <div class="container">
+        <h2>Your Results:</h2>
+        <div class="results">
+            <div class="feedback">
+                <div class="feedback-item">
+                    <span class="label">Accuracy:</span> {{ performance['accuracy'] }}%
+                </div>
+                <div class="feedback-item">
+                    <span class="label">Score:</span> {{ performance['score'] }}
+                </div>
+                <div class="feedback-item">
+                    <span class="label">Mistakes:</span> {{ performance['mistakes'] }}
+                </div>
+                <div class="feedback-item">
+                    <span class="label">Performance Level:</span> {{ performance['performance_level'] }}
+                </div>
+            </div>
+
+            <h2>Historical Comparison</h2>
+            <p>{{ performance['historical_comparison'] }}</p>
+            <p> we can add graphs here in historical data</p>
+
+            <h2>Recommendations</h2>
+            <div class="recommendations">
+                {% for recommendation in recommendations %}
+                    <div class="recommendation-item">{{ recommendation }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
