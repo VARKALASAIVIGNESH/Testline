@@ -7,6 +7,12 @@
 ## Description
 This project is a Flask-based web application designed for interactive quizzes, personalized feedback, and historical score tracking using visualizations. It also incorporates machine learning to provide recommendations for improvement based on past performance.
 
+##Output images
+![{231C1D4A-879A-4C17-87D8-A1F820156AD7}](https://github.com/user-attachments/assets/74d557f1-ac28-4b65-9609-e1382c70f1d7)
+![{B4EB7374-F5DD-46E0-84A8-10D95D917ACB}](https://github.com/user-attachments/assets/95d54771-1f1d-458e-9e4a-5122e578a9a1)
+![{D48C0F34-20C7-4BFF-A619-BC6E6C17FE60}](https://github.com/user-attachments/assets/731bd9e3-7de0-455b-8d1d-90f55547cd5f)
+
+
 ## Features
 - **Quiz Functionality**: Users can take quizzes on various topics and immediately view their results.
 - **Performance Feedback**: Displays metrics like accuracy, score, and mistakes made.
@@ -35,7 +41,7 @@ This project is a Flask-based web application designed for interactive quizzes, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/VARKALASAIVIGNESH/Testline
+   git clone https://github.com/VARKALASAIVIGNESH/Testline.git
    cd Testline
    ```
 
